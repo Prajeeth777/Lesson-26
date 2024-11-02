@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Activtiy 2</title>
+    </head>
+    <body>
+        <h2>Class Inheritence</h2>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <script>
+            class car{
+                constructor(brand){
+                    this.carname=brand;
+                }
+                present(){
+                   return "This is "+this.carname;
+                }
+            }
+            class Model extends car{
+                constructor(brand,mod){
+                    super(brand);
+                    this.model=mod;
+                }
+                show(){
+                    return this.present()+" and model is "+this.model;
+                }
+            }
+            c1=new Model("Ferrari","Enzo");
+            document.getElementById("p1").innerHTML=c1.show();
+            
+        </script>
+    </body>
+</html>
